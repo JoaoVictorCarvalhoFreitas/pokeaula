@@ -38,7 +38,7 @@ while True:
         pokemon_capturado = explorar_ambiente(ambiente)
         if pokemon_capturado:
             capturados.append(pokemon_capturado)
-    time.sleep(1.5)
+    time.sleep(1)
 
 
 
