@@ -1,19 +1,16 @@
 import random
 import time
 
-# Lista de Pokémon que podem aparecer
 pokemons = ['Pikachu', 'Charmander', 'Squirtle', 'Bulbasaur', 'Eevee']
 
-# Função para simular a exploração
 def explorar_ambiente(ambiente):
     print("Explorando", ambiente , "...")
-    if random.random() < 0.3:  # 30% de chance de encontrar um Pokémon
+    if random.random() < 0.3:  
         pokemon = random.choice(pokemons)
         print(f"Um {pokemon} selvagem apareceu!")
         capturar = input("Deseja tentar capturar o Pokémon? (sim/não): ")
         if capturar.lower() == 'sim':
-            # Simula a captura do Pokémon
-            if random.random() < 0.7:  # 70% de chance de sucesso na captura
+            if random.random() < 0.7: 
                 print("Você capturou", pokemon)
                 return pokemon
             else:
@@ -24,7 +21,6 @@ def explorar_ambiente(ambiente):
         print("Nenhum Pokémon apareceu desta vez.")
     return None
 
-# Loop principal do jogo
 capturados = []
 pokebolas = 10
 while True:
@@ -42,7 +38,6 @@ while True:
 
 
 
-# Exibe os Pokémon capturados ao acabar as pokebolas
 print("Pokémon capturados durante sua aventura:")
 for pokemon in capturados:
     print(pokemon)
